@@ -19,6 +19,6 @@
     import ProductList from "./ProductList";
     import CategoryControls from "./CategoryControls";
     export default {
-            components: {CategoryControls, ProductList }
+            components: { CategoryControls, ProductList }
     }
 </script>
