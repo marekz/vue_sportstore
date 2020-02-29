@@ -22,7 +22,7 @@ export default new Vuex.Store({
                 let index = (state.currentPage - 1) * state.pageSize;
                 return state.products.slice(index, index + state.pageSize);
             },
-            pageCount: state => Math.ceil(state.productTotal / state.pageSize)
+            pageCount: state => Math.ceil(state.productsTotal / state.pageSize)
         },
         mutations: {
             setCurrentPage(state, page) {
