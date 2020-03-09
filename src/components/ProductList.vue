@@ -19,7 +19,7 @@
     </div>
 </template>
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 import PageControls from "./PageControls";
 export default {
         components: { PageControls },
@@ -33,6 +33,13 @@ export default {
                 return new Intl.NumberFormat("pl-PL",
                 { style: "currency", currency: "PLN" }).format(value);
             }
+        },
+    methods: {
+        ...mapMutations({ addProduct: "cart/addProduct"}),
+        handleProductAdd(product) {
+            this.addProduct(product);
+            this.$router.push("/cart")
         }
+    }
 }
 </script>
