@@ -7,7 +7,13 @@
                     {{ p.price | currency }}
                 </span>
             </h4>
-            <div class="card-text bg-white p-1">{{ p.description }}</div>
+            <div class="card-text bg-white p-1">
+                {{ p.description }}
+                <button class="btn btn-success btn-sm float-right"
+                        v-on:click="handleProductAdd(p)">
+                    Dodaj do koszyka
+                </button>
+            </div>
         </div>
         <page-controls />
     </div>
