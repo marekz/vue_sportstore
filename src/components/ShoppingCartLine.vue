@@ -31,7 +31,7 @@
             }
         },
         methods: {
-            saveChangeEvent($event) {
+            sendChangeEvent($event) {
                 if ($event.target.value > 0) {
                     this.$emit("quantity", Number($event.target.value));
                     this.qvalue = $event.target.value;

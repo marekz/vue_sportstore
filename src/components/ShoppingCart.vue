@@ -62,7 +62,7 @@
         components: { CartLine },
         computed: {
             ...mapState({ lines: state => state.cart.lines }),
-            ...mapGetters({ totalPrice: "cart/totalPrice" })
+            ...mapGetters({ totalPrice: "totalPrice" })
         },
         methods: {
             ...mapMutations({
