@@ -5,9 +5,9 @@ export default {
     },
     getters: {
         itemCount: state => state.lines.reduce((total, line) =>
-            total + line.quality, 0),
+            total + line.quantity, 0),
         totalPrice: state => state.lines.reduce((total, line) =>
-            total + (line.quality * line.product.price), 0),
+            total + (line.quantity * line.product.price), 0),
     },
     mutations: {
         addProduct(state, product) {

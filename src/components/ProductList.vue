@@ -1,16 +1,16 @@
 <template>
     <div>
-        <div v-for="p in products" v-bind:key="p.id" class="card m-1 p-1 bg-light">
+        <div v-for="product in products" v-bind:key="product.id" class="card m-1 p-1 bg-light">
             <h4>
-                {{ p.name }}
+                {{ product.name }}
                 <span class="badge badge-pill badge-primary float-right">
-                    {{ p.price | currency }}
+                    {{ product.price | currency }}
                 </span>
             </h4>
             <div class="card-text bg-white p-1">
-                {{ p.description }}
+                {{ product.description }}
                 <button class="btn btn-success btn-sm float-right"
-                        v-on:click="handleProductAdd(p)">
+                        v-on:click="handleProductAdd(product)">
                     Dodaj do koszyka
                 </button>
             </div>
@@ -34,12 +34,12 @@ export default {
                 { style: "currency", currency: "PLN" }).format(value);
             }
         },
-    methods: {
-        ...mapMutations({ addProduct: "cart/addProduct"}),
-        handleProductAdd(product) {
-            this.addProduct(product);
-            this.$router.push("/cart")
+        methods: {
+            ...mapMutations({ addProduct: "addProduct"}),
+            handleProductAdd(product) {
+                this.addProduct(product);
+                this.$router.push("/cart")
+            }
         }
-    }
 }
 </script>
