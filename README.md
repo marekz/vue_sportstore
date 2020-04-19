@@ -1,5 +1,11 @@
 # sportstore
 
+To run test project you need run fake date, so yo need to execute two commands:
+```
+npm run json
+npm run serve
+```
+
 ## Project setup
 ```
 yarn install
