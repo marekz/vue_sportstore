@@ -1,6 +1,6 @@
 <template>
     <div>
-        <router-link to="/admin/product/create" class="btn btn-primary my-2">
+        <router-link to="/admin/products/create" class="btn btn-primary my-2">
             Utwórz produkt
         </router-link>
         <table class="table table-sm table-bordered">
