@@ -10,6 +10,6 @@ app.use(auth);
 app.use("/api", router);
 app.use(history());
 app.use("/", express.static("./dist"));
-app.listen(8080, function () {
+app.listen(80, function () {
     console.log("Server HTTP działa na porcie 80");
 })
